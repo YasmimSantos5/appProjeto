@@ -6,32 +6,29 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class BoletoAdapter (private  val boletos : List<Boleto>) : RecyclerView.Adapter<BoletoAdapter.BoletoViewHolder>(){
+class ReservaAdapter (private  val reservas : List<String>) : RecyclerView.Adapter<ReservaAdapter.ReservasViewHolder>(){
 
-    class BoletoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titulo: TextView = itemView.findViewById(R.id.txtTitulo)
-        val valor: TextView = itemView.findViewById(R.id.txtValor)
-        val vencimento: TextView = itemView.findViewById(R.id.txtVencimento)
+    class ReservasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val titulo: TextView = itemView.findViewById(R.id.txtTituloReserva)
     }
 
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         p1: Int
-    ): BoletoAdapter.BoletoViewHolder {
+    ): ReservaAdapter.ReservasViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_boleto, parent, false)
-        return BoletoViewHolder(view)
+            .inflate(R.layout.item_reserva, parent, false)
+        return ReservasViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: BoletoAdapter.BoletoViewHolder, position: Int) {
-        val boleto = boletos[position]
-        holder.titulo.text = boleto.titulo
-        holder.valor.text = boleto.valor
-        holder.vencimento.text = boleto.vencimento
+    override fun onBindViewHolder(holder: ReservaAdapter.ReservasViewHolder, position: Int) {
+        val reservas = reservas[position]
+        holder.titulo.text = reservas
+
     }
 
     override fun getItemCount(): Int {
-        return boletos.size
+        return reservas.size
     }
 }

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 class BoletoAdapter (private  val boletos : List<Boleto>) : RecyclerView.Adapter<BoletoAdapter.BoletoViewHolder>(){
 
     class BoletoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titulo: TextView = itemView.findViewById(R.id.txtTitulo)
+        val titulo: TextView = itemView.findViewById(R.id.txtTituloReserva)
         val valor: TextView = itemView.findViewById(R.id.txtValor)
         val vencimento: TextView = itemView.findViewById(R.id.txtVencimento)
     }

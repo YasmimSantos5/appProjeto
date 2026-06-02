@@ -28,6 +28,14 @@ class PainelActivity : AppCompatActivity() {
             val intent = Intent(this, BoletoActivity::class.java)
             startActivity(intent)
 
+
+        }
+
+        val botaoReserva = findViewById<Button>(R.id.botaoReserva)
+
+        botaoReserva.setOnClickListener {
+            val intent = Intent( this,ReservaActivity::class.java)
+            startActivity(intent)
         }
     }
 }

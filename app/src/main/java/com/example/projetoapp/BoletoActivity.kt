@@ -23,6 +23,12 @@ class BoletoActivity : AppCompatActivity() {
             Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
             Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
             Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
+            Boleto("Taxa Condominio Maio", "R$ 1500", "18/05/2026"),
         )
         val rc = findViewById<RecyclerView>(R.id.RecycleVBiewBoleto)
         rc.layoutManager = LinearLayoutManager(this)
