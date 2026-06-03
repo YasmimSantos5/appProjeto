@@ -37,5 +37,11 @@ class PainelActivity : AppCompatActivity() {
             val intent = Intent( this,ReservaActivity::class.java)
             startActivity(intent)
         }
+
+        val buttonAutorizacaoPainel = findViewById<Button>(R.id.buttonAutorizacaoPainel)
+        buttonAutorizacaoPainel.setOnClickListener {
+            val intent = Intent( this, CadastroAutorizacaoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

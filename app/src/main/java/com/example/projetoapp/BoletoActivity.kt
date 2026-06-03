@@ -2,8 +2,10 @@ package com.example.projetoapp
 
 import android.os.Bundle
 import android.support.v4.os.IResultReceiver
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,5 +35,22 @@ class BoletoActivity : AppCompatActivity() {
         val rc = findViewById<RecyclerView>(R.id.RecycleVBiewBoleto)
         rc.layoutManager = LinearLayoutManager(this)
         rc.adapter = BoletoAdapter(boletos)
+
+        val toolbarBoleto = findViewById<Toolbar>(R.id.toolbarBoleto)
+        setSupportActionBar(toolbarBoleto)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 }
