@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Reservas"
-        app:titleTextColor="#F4F4F4" />
+        app:titleTextColor="#F4F4F4"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerReserva"
