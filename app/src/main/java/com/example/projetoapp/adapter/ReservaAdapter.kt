@@ -1,28 +1,29 @@
-package com.example.projetoapp
+package com.example.projetoapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoapp.R
 
 class ReservaAdapter (private  val reservas : List<String>) : RecyclerView.Adapter<ReservaAdapter.ReservasViewHolder>(){
 
     class ReservasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titulo: TextView = itemView.findViewById(R.id.txtTituloReserva)
+        val titulo: TextView = itemView.findViewById(R.id.txtTituloMural)
     }
 
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         p1: Int
-    ): ReservaAdapter.ReservasViewHolder {
+    ): ReservasViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_reserva, parent, false)
         return ReservasViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ReservaAdapter.ReservasViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ReservasViewHolder, position: Int) {
         val reservas = reservas[position]
         holder.titulo.text = reservas
 

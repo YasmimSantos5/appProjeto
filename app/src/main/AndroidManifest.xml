@@ -12,22 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoApp">
         <activity
-            android:name=".CadastroAutorizacaoActivity"
+            android:name=".activity.MudancaActivity"
             android:exported="false" />
         <activity
-            android:name=".ReservaActivity"
+            android:name=".activity.MuralActivity"
             android:exported="false" />
         <activity
-            android:name=".BoletoActivity"
+            android:name=".activity.CadastroAutorizacaoActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".activity.ReservaActivity"
             android:exported="false" />
         <activity
-            android:name=".PainelActivity"
+            android:name=".activity.BoletoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.CadastroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PainelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

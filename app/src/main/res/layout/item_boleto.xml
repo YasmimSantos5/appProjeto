@@ -7,7 +7,7 @@
     android:layout_margin="8dp">
 
     <TextView
-        android:id="@+id/txtTituloReserva"
+        android:id="@+id/txtTituloMural"
         android:text="Condominio "
         android:textSize="18sp"
         android:textStyle="bold"

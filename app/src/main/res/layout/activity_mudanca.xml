@@ -5,10 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ReservaActivity">
+    tools:context=".activity.MudancaActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarReserva"
+        android:id="@+id/toolbarmudanca"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -17,17 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Reservas"
-        app:titleTextColor="#F4F4F4"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerReserva"
-        android:layout_width="409dp"
-        android:layout_height="665dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarReserva"
-        app:layout_constraintVertical_bias="0.0" />
+        app:title="Mudança"
+        app:titleTextColor="#FFFFFF" />
 </androidx.constraintlayout.widget.ConstraintLayout>

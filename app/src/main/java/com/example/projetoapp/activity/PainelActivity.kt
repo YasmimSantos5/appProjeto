@@ -1,4 +1,4 @@
-package com.example.projetoapp
+package com.example.projetoapp.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.projetoapp.activity.MuralActivity
+import com.example.projetoapp.R
 
 class PainelActivity : AppCompatActivity() {
 
@@ -34,14 +36,24 @@ class PainelActivity : AppCompatActivity() {
         val botaoReserva = findViewById<Button>(R.id.botaoReserva)
 
         botaoReserva.setOnClickListener {
-            val intent = Intent( this,ReservaActivity::class.java)
+            val intent = Intent(this, ReservaActivity::class.java)
             startActivity(intent)
         }
 
         val buttonAutorizacaoPainel = findViewById<Button>(R.id.buttonAutorizacaoPainel)
         buttonAutorizacaoPainel.setOnClickListener {
-            val intent = Intent( this, CadastroAutorizacaoActivity::class.java)
+            val intent = Intent(this, CadastroAutorizacaoActivity::class.java)
             startActivity(intent)
         }
-    }
+        val buttonMural = findViewById<Button>(R.id.button4)
+        buttonMural.setOnClickListener {
+            val intent = Intent(this, MuralActivity::class.java)
+            startActivity(intent)
+            }
+        val buttonMudança = findViewById<Button>(R.id.button6)
+        buttonMural.setOnClickListener {
+            val intent = Intent(this, MudancaActivity::class.java)
+            startActivity(intent)
+        }
+       }
 }

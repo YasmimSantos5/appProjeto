@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="#820AD1"
     android:padding="24dp"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <!-- LOGO -->
 
@@ -25,7 +25,7 @@
     <!-- TITULO -->
 
     <TextView
-        android:id="@+id/txtTituloReserva"
+        android:id="@+id/txtTituloMural"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -51,7 +51,7 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#E0E0E0"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/txtTituloReserva"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloMural"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

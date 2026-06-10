@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#820AD1"
     android:id="@+id/mainCadastro"
-    tools:context=".CadastroActivity">
+    tools:context=".activity.CadastroActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
         <!-- TITULO -->
 
         <TextView
-            android:id="@+id/txtTituloReserva"
+            android:id="@+id/txtTituloMural"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -56,7 +56,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtTituloReserva" />
+            app:layout_constraintTop_toBottomOf="@id/txtTituloMural" />
 
         <View
             android:id="@+id/linhaNome"

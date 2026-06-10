@@ -1,18 +1,20 @@
-package com.example.projetoapp
+package com.example.projetoapp.activity
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import android.graphics.Color
-import android.view.MenuItem
-import android.view.View
-import androidx.appcompat.widget.Toolbar
+import com.example.projetoapp.R
+import java.util.Calendar
 
 class CadastroAutorizacaoActivity : AppCompatActivity() {
 
@@ -63,11 +65,11 @@ class CadastroAutorizacaoActivity : AppCompatActivity() {
                 campoapartamento.text.clear()
 
                 // RESETAR DATEPICKER
-                val hoje = java.util.Calendar.getInstance()
+                val hoje = Calendar.getInstance()
                 campodata.updateDate(
-                    hoje.get(java.util.Calendar.YEAR),
-                    hoje.get(java.util.Calendar.MONTH),
-                    hoje.get(java.util.Calendar.DAY_OF_MONTH)
+                    hoje.get(Calendar.YEAR),
+                    hoje.get(Calendar.MONTH),
+                    hoje.get(Calendar.DAY_OF_MONTH)
                 )
 
             } else {

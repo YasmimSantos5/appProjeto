@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#810AD0"
-    tools:context=".PainelActivity">
+    tools:context=".activity.PainelActivity">
 
     <Button
         android:id="@+id/button7"
@@ -26,7 +26,7 @@
         android:layout_height="64dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="80dp"
-        android:backgroundTint="#DEDEDE"
+        android:backgroundTint="#FFFFFF"
         android:text="Mudança"
         android:textColor="#810AD0"
         app:layout_constraintBottom_toTopOf="@+id/button7"

@@ -1,4 +1,4 @@
-package com.example.projetoapp
+package com.example.projetoapp.activity
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,6 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projetoapp.R
+import com.example.projetoapp.adapter.ReservaAdapter
 
 class ReservaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
