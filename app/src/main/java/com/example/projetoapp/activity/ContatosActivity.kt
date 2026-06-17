@@ -1,7 +1,6 @@
 package com.example.projetoapp.activity
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.DatePicker
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
@@ -11,28 +10,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.projetoapp.R
 
-class MudancaActivity : AppCompatActivity() {
+class ContatosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_mudanca)
+        setContentView(R.layout.activity_contatos)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val toolbarMural = findViewById<Toolbar>(R.id.toolbarmudanca)
-        setSupportActionBar(toolbarMural)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        }
-        override fun onOptionsItemSelected(item: MenuItem): Boolean {
-            return when (item.itemId) {
-                android.R.id.home -> {
-                    finish()
-                    true
-                }
-                else -> super.onOptionsItemSelected(item)
-            }
-        }
+
+
     }
+}

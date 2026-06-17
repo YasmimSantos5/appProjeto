@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.projetoapp.activity.MuralActivity
 import com.example.projetoapp.R
 
 class PainelActivity : AppCompatActivity() {
@@ -24,17 +23,12 @@ class PainelActivity : AppCompatActivity() {
         }
 
         val botaoBoleto = findViewById<Button>(R.id.btnBoleto)
-
         botaoBoleto.setOnClickListener {
-
             val intent = Intent(this, BoletoActivity::class.java)
             startActivity(intent)
-
-
         }
 
         val botaoReserva = findViewById<Button>(R.id.botaoReserva)
-
         botaoReserva.setOnClickListener {
             val intent = Intent(this, ReservaActivity::class.java)
             startActivity(intent)
@@ -45,15 +39,23 @@ class PainelActivity : AppCompatActivity() {
             val intent = Intent(this, CadastroAutorizacaoActivity::class.java)
             startActivity(intent)
         }
-        val buttonMural = findViewById<Button>(R.id.button4)
+
+        val buttonMural = findViewById<Button>(R.id.BtnMural)
         buttonMural.setOnClickListener {
             val intent = Intent(this, MuralActivity::class.java)
             startActivity(intent)
-            }
-        val buttonMudança = findViewById<Button>(R.id.button6)
-        buttonMural.setOnClickListener {
+        }
+
+        val buttonmudanca = findViewById<Button>(R.id.btnmudanca)
+        buttonmudanca.setOnClickListener {
             val intent = Intent(this, MudancaActivity::class.java)
             startActivity(intent)
         }
-       }
+
+        val buttonPortaria = findViewById<Button>(R.id.btnPortaria)
+        buttonPortaria.setOnClickListener {
+            val intent = Intent(this, ContatosActivity::class.java)
+            startActivity(intent)
+        }
+    }
 }

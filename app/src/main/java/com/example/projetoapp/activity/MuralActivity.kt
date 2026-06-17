@@ -35,12 +35,17 @@ class MuralActivity : AppCompatActivity() {
             "Portão de Veículos",
             "Alarme de Incêndio",
             "Festa Junina",
-        )
+            "Jogo do Brasil",
+            "Festa de Aniversário",
+            "Festa Junina",
+            "Jogo do Brasil",
+            "Festa de Aniversário",
+            )
         val rc = findViewById<RecyclerView>(R.id.RecylerViewMural)
         rc.layoutManager = LinearLayoutManager(this)
         rc.adapter = MuralAdapter(mural)
 
-        val botaoVoltar = findViewById<Button>(R.id.button4)
+        val botaoVoltar = findViewById<Button>(R.id.Btnvoltarpainel)
 
         botaoVoltar.setOnClickListener {
             startActivity(Intent(this, PainelActivity::class.java))

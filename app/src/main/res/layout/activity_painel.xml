@@ -1,115 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#810AD0"
+    android:background="#F8FAFC"
+    android:padding="16dp"
     tools:context=".activity.PainelActivity">
 
-    <Button
-        android:id="@+id/button7"
+    <LinearLayout
+        android:id="@+id/header"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Contatos com a Portaria"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="180dp"
+        android:background="#5B21B6"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="134dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Mudança"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Painel do Morador"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="131dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Prestação de Contas"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bem-vindo!"
+            android:textColor="#D8C8FF"
+            android:textSize="16sp"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Mural"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonAutorizacaoPainel" />
+    </LinearLayout>
+
+    <!-- BOLETO -->
 
     <Button
         android:id="@+id/btnBoleto"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6D28D9"
+        android:elevation="8dp"
         android:text="Boleto"
-        android:textColor="#810AD0"
-        android:textColorHint="#232323"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAutorizacaoPainel"
-        app:layout_constraintEnd_toStartOf="@+id/botaoReserva"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toStartOf="@id/botaoReserva" />
+
+    <!-- RESERVA -->
 
     <Button
         android:id="@+id/botaoReserva"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:backgroundTint="#7C3AED"
+        android:elevation="8dp"
         android:text="Reserva"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintTop_toTopOf="@id/btnBoleto"
+        app:layout_constraintStart_toEndOf="@id/btnBoleto"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- AUTORIZAÇÃO -->
 
     <Button
         android:id="@+id/buttonAutorizacaoPainel"
-        android:layout_width="133dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8B5CF6"
+        android:elevation="8dp"
         android:text="Autorização"
-        android:textColor="#810AD0"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintStart_toStartOf="@id/btnBoleto"
+        app:layout_constraintTop_toBottomOf="@id/btnBoleto" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#F8F8F8"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="27dp" />
+    <!-- MURAL -->
+
+    <!-- PORTARIA -->
+
+    <Button
+        android:id="@+id/BtnMural"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#9333EA"
+        android:elevation="8dp"
+        android:text="Mural"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/botaoReserva"
+        app:layout_constraintTop_toBottomOf="@+id/botaoReserva" />
+
+    <!-- MUDANÇA -->
+
+    <Button
+        android:id="@+id/btnPortaria"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#A855F7"
+        android:elevation="8dp"
+        android:text="Portaria"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAutorizacaoPainel" />
+
+    <Button
+        android:id="@+id/btnmudanca"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#C084FC"
+        android:elevation="8dp"
+        android:text="Mudança"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/BtnMural"
+        app:layout_constraintTop_toBottomOf="@+id/BtnMural" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

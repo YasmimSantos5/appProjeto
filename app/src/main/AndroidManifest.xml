@@ -33,6 +33,9 @@
             android:name=".activity.PainelActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.ContatosActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
